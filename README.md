@@ -96,7 +96,7 @@ Output:
 
 ### Observation
 
-The Hugging Face transport was downloaded, but did not execute successfully.
+The Hugging Face transport was downloaded, executed successfully but gave the wrong answer.
 
 I tried other models using Hugging Face transport, but they did not work because of the space constraints.
 
@@ -164,7 +164,7 @@ output:
 
 ### Observation
 
-The Ollama transport was easy to use since the model ecosystem is already integrated with Ollama. It required minimal configuration, but it did not execute successfully.
+The Ollama transport was easy to use since the model ecosystem is already integrated with Ollama. It required minimal configuration, it executed successfully, but also gave the wrong answer.
 
 ---
 
