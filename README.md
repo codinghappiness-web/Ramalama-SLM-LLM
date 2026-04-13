@@ -50,7 +50,7 @@ This confirmed that RamaLama was successfully installed.
 
 ---
 
-# Step 2 — Running My First Model (Hugging Face Transport)
+# Step 2 — Running My First Model Using Hugging Face Transport
 
 For my first experiment, I selected a small instruction-tuned model hosted on **Hugging Face**.
 
@@ -76,7 +76,7 @@ Output:
 
 ![hugging face qwen](https://github.com/user-attachments/assets/af7b2579-2ea5-49cc-a0b7-a7216f26ee75)
 
-I used another model using hugging face transport called microsoft phi
+I used another model using Hugging Face Transport called Microsoft Phi
 
 Command used:
 
@@ -96,19 +96,26 @@ Output:
 
 ### Observation
 
-The Hugging Face transport was downloaded, executed successfully but gave the wrong answer.
+The Microsoft Phi model was downloaded, executed successfully, but gave the wrong answer.
 
 I tried other models using Hugging Face transport, but they did not work because of the space constraints.
 
 Deepseek model
 
+Output:
+
 ![hugging face deepseek model](https://github.com/user-attachments/assets/0b7df4d9-5d0e-47e6-99c8-fc5ba1c26958)
 
 Gemma model
 
+Output:
+
 ![hugging face gemma model](https://github.com/user-attachments/assets/d2a5db9a-f0cd-4a9a-9fdb-239b17a407a6)
 
-instructlab model
+Instructlab model
+
+Output: 
+
 ![hugging face instructlab model](https://github.com/user-attachments/assets/2898f8a6-1382-4214-960d-c105a15bd940)
 
 ---
@@ -135,7 +142,7 @@ Prompt used:
 What are the Four Foundations of the Fedora Project?
 ```
 
-output:
+Output:
 
 ![ollama granite model](https://github.com/user-attachments/assets/3402d5c0-d284-48af-a286-a08283d67a1f)
 
@@ -157,7 +164,7 @@ Prompt used:
 What are the Four Foundations of the Fedora Project?
 ```
 
-output:
+Output:
 
 ![ollama Qwen model](https://github.com/user-attachments/assets/ce58e2f4-2391-4f73-9046-2ab3a8a62b6e)
 
@@ -207,7 +214,7 @@ Output:
 ![modelscope unsloth llama 3 2](https://github.com/user-attachments/assets/880941cc-c674-450f-970a-310796865c6c)
 
 
-The model did not respond successfully.
+The model did not respond correctly.
 
 ### Observation
 
@@ -215,9 +222,9 @@ ModelScope worked similarly to Hugging Face, but with a smaller selection of mod
 
 ---
 
-# Step 5 — Attempting OCI Transport
+# Step 5 — Running Models Using OCI Transport
 
-I attempted to convert a model into an OCI container image using the following command:
+I tried to convert a model into an OCI container image using the following command:
 
 ```
 ramalama convert ollama://tinyllama ghcr.io/codinghappiness-web/tinyllama:gguf
@@ -230,6 +237,8 @@ denied: requested access to the resource is denied
 unauthorized: authentication required
 ```
 
+Output:
+
 ![oci tinyllama model](https://github.com/user-attachments/assets/d33a47c5-5d55-4a10-8b09-69d8a3e17ac8)
 
 I tried another model
@@ -238,12 +247,17 @@ I tried another model
 ramalama convert ollama://llama3.2 ghcr.io/codinghappiness-web/llama3.2:gguf
 ```
 
+Output: 
+
 ![error oci llama 3 2 model](https://github.com/user-attachments/assets/eb798f56-d676-4ecf-b7bd-119f0918a0dd)
 
 And lastly, tried the Mistral model
+
 ```
 ramalama convert ollama://mistral ghcr.io/codinghappiness-web/mistral:gguf
 ```
+
+Output:
 
 ![error oci mistral model](https://github.com/user-attachments/assets/fa8df669-f003-4f43-95a0-3f5739ad6d69)
 
@@ -307,11 +321,13 @@ The OCI registry push failed due to authentication or permission configuration i
 
 Some useful RamaLama commands explored:
 
-List models:
+List available models:
 
 ```
 ramalama list
 ```
+
+Output:
 
 ![ramalama list](https://github.com/user-attachments/assets/a18a8a53-20db-484b-b55b-351b4c555c1c)
 
@@ -322,7 +338,7 @@ Pull model without running:
 ramalama pull huggingface://Qwen
 ```
 
-Run without container:
+Run without a container:
 
 ```
 ramalama run --nocontainer huggingface://granite-moe
@@ -361,4 +377,4 @@ Through this exploration, I successfully:
 * Investigated and documented errors
 * Analyzed the developer experience
 
-This exercise helped me better understand how RamaLama simplifies local AI model execution and highlights the trade-offs between different model distribution methods.
+This exercise helped me better understand how RamaLama simplifies local AI model execution.
