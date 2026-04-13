@@ -313,6 +313,9 @@ List models:
 ramalama list
 ```
 
+![ramalama list](https://github.com/user-attachments/assets/a18a8a53-20db-484b-b55b-351b4c555c1c)
+
+
 Pull model without running:
 
 ```
